@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "http://localhost:1970/api?search=\\2&format=mediawiki"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://(.*?).wikipedia.org/api/rest_v1/data/citation/mediawiki/(.*?)\\?action=query&fomat=json",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://localhost:1970/api?search=https%3A%2F%2Fent.abs-cbn.com%2Farticles-videos%2Fheaven-and-marco-reveal-fans-most-awesome-unforgettable-gift-22252&format=mediawiki"
+      }
+    },
+    "condition": {
+      "urlFilter": "https://en.wikipedia.org/api/rest_v1/data/citation/mediawiki/https%3A%2F%2Fent.abs-cbn.com%2Farticles-videos%2Fheaven-and-marco-reveal-fans-most-awesome-unforgettable-gift-22252?action=query&format=json",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "http://localhost:1970/api?search=\\2&format=mediawiki"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://(.*?).wikipedia.org/api/rest_v1/data/citation/mediawiki/(.*?)\\?action=query&format=json",
+      "resourceTypes": ["main_frame", "xmlhttprequest"]
+    }
+  }
+]

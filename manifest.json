@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Local Citoid",
+  "description": "A wrapper to redirect Citoid request on enwiki to a locally run Citoid server",
+  "version": "1.0",
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "lcit_ruleset_1",
+        "enabled": true,
+        "path": "rules_2.json"
+      }
+    ]
+  },
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": ["https://*.wikipedia.org/"]
+}
